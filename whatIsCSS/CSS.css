@@ -1,0 +1,15 @@
+div{
+    width: 10rem;
+    height: 10rem;
+    text-align: center;
+    border: solid 1px;
+}
+
+.divClass{
+    background-color: orange;
+}
+
+#divId{
+    background-color: blue;
+    color: papayawhip;
+}
