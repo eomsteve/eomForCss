@@ -86,7 +86,7 @@ text및 `text-decoration`, `currentcolor` 현재 색상값을 설정한다.
 * hsl(hsl : Hue(색생) Saturation(채도) Lightness(명도))값
   * hsl(30.0 100% 50% / 60%) 마지막은 투명도
 
-### TEXT EMPHASIS
+### TEXT EMPHASIS 
 
 텍스트에 강조 표시를 적용한다(강조점). 단 공백 및 제어문자는 제외한다.
 
@@ -96,6 +96,8 @@ text및 `text-decoration`, `currentcolor` 현재 색상값을 설정한다.
 * `문자열` : 'x','f' 등등
 * `keyword value` : `filled` , `open` , `filled sesame`, `open sesame` ,`dot` ,`circle` ,`double-circle` , `triangle` 
 * 색상추가 : `filled sesame # 555`
+
+The text-emphasis property is not supported in any of the major browsers.
 
 ### OVERFLOW WRAP
 
@@ -122,7 +124,7 @@ text및 `text-decoration`, `currentcolor` 현재 색상값을 설정한다.
   * `wavy` : 물결선을 만든다.
 * thickness : 선의 굵기를 지정한다.
 
-### TEXT ALIGEN
+### TEXT ALIGN
 
 텍스트의 정렬 방향을 의미한다. 
 
