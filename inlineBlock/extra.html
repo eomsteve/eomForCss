@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline and Block switch</title>
+    <style>
+        div{
+            display: inline;
+        }
+        #blue{
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+        }
+        #red{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+        #orange{
+           background-color: orange;
+            width: 100px;
+            height: 100px;
+        }
+        span{
+            display: block;
+            border:solid 1px black;
+            background-color: orange;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        div tag에 inline 속성을 주어 만들었습니다. 내용이 있는만큼만 표현됩니다.
+    </p>
+    <div id="blue">
+        blue
+    </div>
+    <div id="red">
+        red
+    </div>
+    <div id="orange">
+        orange
+    </div>
+    <br>
+    span 태그는 inline 이지만 속성을 block으로 주어 쌓아 올렸습니다
+    <span></span><span></span><span></span>
+</body>
+</html>
