@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Contain</title>
+    <style>
+        .img{
+            background-color: brown;
+            width: 80px;
+            height: 120px;
+            
+        }
+        #cover{
+            background-color: brown;
+            background-image: url(./rayn.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #contain{
+            background-color: brown;
+            background-image: url(./rayn.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        #contain2{
+            background-color: brown;
+            background-image: url(./rayn.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-size: 50% 50%;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="img" id="cover">
+
+    </div>
+    <p>
+        cover 로 이미지를 설정한 경우 비율이 유지되므로 잘리는경우도 있다. <br>
+        
+    </p>
+    <div class="img" id="contain">
+
+    </div>
+    <p>
+        contian 으로 이미지를 설정한 경우 비율이 맞지않으면 뒷 배경이 드러난다. <br>
+        
+    </p>
+    <div class="img" id="contain2"></div>
+    <p>
+        이미지의size 속성을 중복으로 적용하여 contain 속성에 50%를 지정해<br>
+        요소의 50%만큼 채운 이미지를 넣을 수 있다.
+    </p>
+</body>
+</html>
