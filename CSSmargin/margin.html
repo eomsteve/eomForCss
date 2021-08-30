@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body > div {
+  margin-top : 20px;
+  margin-bottom : 20px;
+}
+
+    #div1{background:#ff0000}
+    #div2{background:#FF6600}
+    #div3{background:#FFFF00}
+    #div4{background:#00CC00}
+    #div5{background:#0033FF}
+    #div6{background:#003399}
+    #div7{background:#9933FF}
+    .box{
+        width:300px;
+        border: 1px solid blue;
+    }
+    .parent{
+        width: 300px;
+        height: 100px;
+        background-color: red;
+          
+    }
+
+    .child{
+        width: 300px;
+        height: 100px;
+        background-color: lightseagreen;
+        margin-top: 50px;
+    }
+    #id_parent {
+            width: 300px;            
+            border: 1px solid red;
+    }
+    #id_child1 {            
+        background-color: lightgreen;       
+        margin-bottom: 100px;            
+    }
+    #id_child2 {
+        margin-bottom: 20px; 
+    }
+    #id_child3 {            
+        background-color: lightgreen;
+        margin-top: 150px;           
+    }
+
+    </style>
+</head>
+<body>
+    <div id="div1" >가나다</div>
+    <div id="div2">가나다</div>
+    <div id="div3">가나다</div>
+    <div id="div4">가나다</div>
+    <div id="div5">가나다</div>
+    <div id="div6">가나다</div>
+    <div id="div7">가나다</div>
+    <p>각각의 마진은 총합 40px을 가져야 하지만 20px만 가지게 된다.</p>
+    <div class="box">
+    <div class="parent">
+        <div class="child">
+                부모/자식 간의 여백 병합, 부모의 클레스에는 마진이 없지만 자식의 클레스는 마진이 있어 마진이 생기게 되었다
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <p>
+        블럭과 블럭 사이에 빈블럭이 들어가 위아래 블럭의 마진이 중간 블럭의 마진을 상쇄하였다.
+    </p>
+    <div id="id_parent">
+        <div id="id_child1">자식 1</div>
+        <div id="id_child2"></div>
+        <div id="id_child3">자식 2</div>
+    </div>
+
+
+
+</body>
+</html>
