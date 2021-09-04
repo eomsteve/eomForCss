@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+    <style>
+      div {
+        margin: 20px;
+        padding: 20px;
+        border: 20px solid black;
+        width: 500px;
+      }
+      .cb {
+        box-sizing: content-box;
+      }
+      .bb {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cb">
+      <p>content-box</p>
+    </div>
+    <div class="bb">
+      <p>border-box</p>
+    </div>
+    <p>
+        같은 너비를 가지고 있으나 박스 사이징을 다르게 설정하여 크기가 다르게 나타난다.
+    </p>
+  </body>
+</html>
