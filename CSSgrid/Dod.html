@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Html</title>
+    <style>
+        div,nav
+        {
+            border: 1px solid black;
+        }
+        body{
+            height: 57rem;
+        }
+        .container
+        {
+            display : grid;
+            border : 1px solid black;
+            width : 100%;
+            height : 100%;
+            grid-template-columns: 30% auto auto;
+            grid :
+            "header header  header header"
+            "nav    main    main    main"
+            "nav    main    main    main"
+            "nav    main    main    main"
+            "nav    main    main    main";
+        }
+        header
+        {
+            grid-area: header;
+            padding : 10px 50%;
+            align-self : center;
+        }
+        .item
+        {
+            padding : 1rem;
+        }
+        main
+        {
+            grid-area: main;
+            display : grid;
+            grid-template-rows: repeat(3,0.8fr);
+            padding : 0;
+        }
+        nav
+        {
+            display : grid;
+            grid-template-columns: 3rem;
+            justify-content:center;
+            align-items: center;
+            grid-area: nav;
+        }
+        nav > span, main > div, header
+        {
+            font-weight : bold;
+            text-align: center;
+        }
+        .layer3
+        {
+            display : grid;
+            justify-content: space-around;
+            grid-auto-flow: column;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 3rem;
+            column-gap: 4rem;
+        }
+        .layer2
+        {
+            display : grid;
+            justify-content: space-around;
+            grid-template-columns:  1fr 1fr;
+            padding: 3rem;
+            column-gap: 4rem;
+        }
+        .layer1
+        {
+            display : grid;
+            justify-content: space-around;
+            grid-template-columns:  1fr;
+            padding: 3rem;
+            column-gap: 4rem;
+        }
+        .layer1 > div, .layer2 > div,.layer3 > div
+        {
+            display : grid;
+            justify-content:center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            12
+        </header>
+        <main>
+            <div class="layer3">
+                <div><span>3</span></div>
+                <div><span>3</span></div>
+                <div><span>3</span></div>
+            </div>
+            <div class="layer2">
+                <div><span>6</span></div>
+                <div><span>6</span></div>
+            </div>
+            <div class="layer1">
+                <div>6</div>
+            </div>
+        </main>
+        <nav>
+            <span>3</span>
+        </nav>
+    </div>
+</body>
+</html>
