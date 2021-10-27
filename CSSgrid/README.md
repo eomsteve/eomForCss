@@ -221,7 +221,7 @@ gap:의값을 1개만 입력하면 행/열 사이의 간격이 동일하게 설�
 {
 	align-items : stretch; // 크기에 맞게 최대한 늘림
     align-items : start; // 위에서부터 시작
-    align-items : cneter; // 중앙
+    align-items : center; // 중앙
     align-items : end; //아래부터
 }
 ```
@@ -235,7 +235,7 @@ gap:의값을 1개만 입력하면 행/열 사이의 간격이 동일하게 설�
 {
 	justify-items : stretch; // 크기에 맞게 최대한 늘림
     justify-items : start; // 왼쪽에서부터
-    justify-items : cneter; // 중앙
+    justify-items : center; // 중앙
     justify-items : end; //오른쪽부터
 }
 ```
