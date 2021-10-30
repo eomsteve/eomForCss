@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc var</title>
+    <style>
+        :root
+        {
+            --base-background-color : plum;
+            --div-background-color: aquamarine;
+            --div-general-padding : 30px;
+            --inner-color : red;
+            --default-text-size : 2rem;
+            --reset-padding : 0px;
+            --reset-margin : 0px;
+            --body-font-size : 8rem;
+            --font-align : center;
+            --li-padding: 0px;
+            --li-design : circle;
+        }
+        .background
+        {
+            width : 100%;
+            height : 100vh;
+            background-color: var(--base-background-color);
+        }
+        body
+        {
+            font-size: var(--body-font-size);
+            padding : var(reset-padding);
+        }
+        div
+        {
+            display: inline-block;
+            background-color: var(--div-background-color);
+            padding : calc(var(--div-general-padding) - 10px);
+            font-size: var(--default-text-size);
+        }
+        .inner
+        {
+            background-color: var(--inner-color);
+            margin : calc(10px + 1rem);
+        }
+        li
+        {
+            padding-left : var(--li-padding);
+            list-style: var(--li-design);
+            font-size: calc(var(--body-font-size) - 3rem - var(--default-text-size));
+        }
+    </style>
+</head>
+<body>
+    what
+    <div class="background">
+        <div>
+            <div class="inner">
+                hello world!
+            </div>
+        </div>
+        <div><ul>
+            <li>계산기</li>
+            <li>안녕하세요</li>
+            <li>네~</li>
+        </ul></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
