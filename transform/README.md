@@ -89,6 +89,8 @@ transform: unset;
 
 ## 정렬
 
+CSS 정렬속성은 `flex` 컨테이너의 기본축과 `grid`컨테이너의 인라인 축을 다라 공간에 정렬한다.
+
 `justify` 는 수평축으로의 정렬(가로축을 기준으로 좌우에 대한 정렬을 뜻함.) `align` 은 수직축(세로축)으로의 정렬이다.
 
 ### justify-content
