@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Holy Grail layout</title>
+    <style>
+        body{padding : 0px; margin : 0px;}
+        table.main
+        {
+            width: 99vw;
+            border : 1px solid lightgreen;
+            border-collapse: collapse;
+        }
+        table.innerBox
+        {
+            padding : 10px;
+            height : 5em;
+            width : 10em;
+            border : 1px solid lightgreen;
+            border-collapse: collapse;
+        }
+        table.footerSqure
+        {
+            padding : 10px;
+            height : 5em;
+            width : 90%;
+            border : 1px solid lightgreen;
+            border-collapse: collapse;
+        }
+        table.footerInnerBox
+        {
+            padding : 10px;
+            height : 1em;
+            width : 100%;
+            border : 1px solid lightgreen;
+            border-collapse: collapse;
+        }
+        table.navBox
+        {
+            padding : 1px;
+            height : 1em;
+            width : 100%;
+            border-collapse: separate;
+            border-spacing: 10px;
+            border : none;
+        }
+        table.bodyBox
+        {
+            padding : 1px;
+            height : 1em;
+            width : 100%;
+            border-collapse: separate;
+            border-spacing: 1.3rem;
+            border : none;
+        }
+        table.bodyBox td.bigSqure
+        {
+            height : 12rem;
+        }
+        table.bodyBox td.smallSqure
+        {
+            height : 1.3rem;
+        }
+        table.bodyBox td.blank
+        {
+            empty-cells: hide;
+            width : 13%;
+        }
+        th
+        {
+            padding : 10px;
+        }
+        td
+        {
+            padding : 10px;
+            border : 1px solid lightgreen;
+        }
+        td.nav
+        {
+            padding : 10px;
+            border : 1px solid lightgreen;
+            border-bottom: 0px;
+        }
+        td.blank
+        {   
+            padding : 1.3rem 0px;
+            border-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <table class="main">
+        <thead>
+            <tr>
+                <th style="height:10vh" colspan="3">
+                    <table class="innerBox">
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </table>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td class="nav" style=" width: 13rem; vertical-align:top;">
+            <center>
+                <table class="navBox">
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </center>
+            </td>
+            <td class="nav" colspan="2">
+            <center>
+                <table class="bodyBox">
+                    <tr>
+                        <td class="bigSqure"></td>
+                        <td class="blank"></td>
+                        <td class="blank"></td>
+                        <td class="bigSqure"></td>
+                    </tr>
+                    <tr>
+                        <td class="smallSqure"></td>
+                        <td class="blank"></td>
+                        <td class="blank"></td>
+                        <td class="smallSqure"></td>
+                    </tr>
+                </table>
+                <table class="bodyBox">
+                    <tr>
+                        <td class="bigSqure"></td>
+                        <td class="blank"></td>
+                        <td class="blank"></td>
+                        <td class="bigSqure"></td>
+                    </tr>
+                    <tr>
+                        <td class="smallSqure"></td>
+                        <td class="blank"></td>
+                        <td class="blank"></td>
+                        <td class="smallSqure"></td>
+                    </tr>
+                </table>
+            </center>
+            </td>
+        </tr>
+        <tr>
+            <td class="blank"></td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <td style="border : none;">
+                <center>
+                <table class="footerSqure">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </center>
+            </td>
+            <td colspan="2" style="vertical-align:top;border-left: none;">
+                <table class="footerInnerBox">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tfoot>
+    </table>
+</body>
+</html>
