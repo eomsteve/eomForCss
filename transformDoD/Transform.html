@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform dod 1번</title>
+    <style>
+        .mainContent
+        {
+            display: flex;
+            height: 98vh;
+            width: 99vw;
+            justify-content: center;
+            align-items: center;
+            background-color: yellowgreen;
+        }
+        .line
+        {
+            display: flex;
+            width: 100%;
+            height: 20rem;
+            justify-content: center;
+            align-items: center;
+        }
+        .album
+        {
+            transform : skew(20deg, -40deg);
+            height:100%;
+            width:30%;
+            margin-left: -5rem;
+            background-color: aquamarine;
+            border : 1px solid black;
+            /* -webkit-box-reflect: below -1rem linear-gradient(transparent, yellowgreen); */
+        }
+        .album:hover
+        {
+            transform : skew(-20deg, 40deg);
+            transform : scale(1.3, 1.3);
+            box-shadow: 5px 5px gray;
+            z-index: 999;
+        }
+        .album.first
+        {
+            margin-left : 0px;
+        }
+        .album.last
+        {
+            margin-right :0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainContent">
+        <div class="line">
+        <div class="album first"></div>
+        <div class="album"></div>
+        <div class="album"></div>
+        <div class="album"></div>
+        <div class="album"></div>
+        <div class="album"></div>
+        <div class="album last"></div>
+        </div>
+    </div>
+</body>
+</html>
