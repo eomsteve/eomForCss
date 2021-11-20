@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition and animation</title>
+    <style>
+        div
+        {
+            height: 100px;
+            width: 100px;
+            background-color: plum;
+            text-align: center;
+            font-weight: bold;
+            display:inline-block;
+        }
+        .transition
+        {
+            transition: width 2s;
+        }
+        .transition:hover
+        {
+            width : 200px;
+        }
+        .animations
+        {
+            animation-duration: 2s;
+            animation-name : dod;
+            animation-iteration-count: infinite;
+        }
+        .animations:active
+        {
+            animation-play-state: paused;
+        }
+        @keyframes dod
+        {
+            0%
+            { 
+                width : 100px;
+            }
+            50%
+            {
+                width : 130px;
+            }
+            100%
+            { 
+                width :200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="transition">
+        transtition : hover
+    </div>
+    <p style="display: inline-block">
+        transtion은 어떠한 상태가 변화해야 할때 애니메이션이 동작한다. 변화하는 상태가 아니라면 실행되지 않는다.
+    </p>
+    <br>
+    <hr>
+    <br>
+    <div class="animations">
+        animation
+    </div>
+    <p style="display: inline-block">
+        animation은 상태에 상관업이 작동한다. 또한 최종 형태까지 변화하는 도중의 프레임도 관리할 수 있다.
+        마우스를 누르고 있으면 멈춘다!
+    </p>
+</body>
+</html>
