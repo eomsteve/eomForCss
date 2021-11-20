@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hamburger</title>
+    <style>
+        .hamburger
+        {
+            width: 50px;
+            height: 30px;
+            position:absolute;
+            top : 1%;
+            left: 20%;
+        }
+        .hamburger:hover::before{
+            top: 50%;
+            transform:rotate(45deg);
+        }
+        .hamburger:hover::after {
+            top: 50%;
+            transform:rotate(135deg);
+        }
+        .hamburger:hover .icon
+        {
+            background : rgba(255, 255, 255, 0);
+        }
+        .icon
+        {
+            position:absolute;
+            top : 13px;
+            left : 0px;
+            background-color: black;
+            width: 100%;
+            height: 4px;
+        }
+        .hamburger::before
+        {
+            content :"";
+            position:absolute;
+            top : 0px;
+            left : 0px;
+            background-color: black;
+            width: 100%;
+            height: 4px;
+        }
+        .hamburger::after
+        {
+            content :"";
+            position:absolute;
+            bottom : 0px;
+            left : 0px;
+            background-color: black;
+            width: 100%;
+            height: 4px;
+        }
+        .testMiddle
+        {
+            background-color: orange;
+            display: block;
+            height: 4px;
+            width : 100%;
+        }
+        .testMiddle::before 
+        {
+            content: '';
+            position: absolute;
+            top : 20px;
+            background-color: red;
+            height: 4px;
+            width : 3.12em;
+        }
+        .testMiddle::after
+        {
+            content: '';
+            position: absolute;
+            top : 30px;
+            background-color: #00a;
+            height: 4px;
+            width : 3.12em;
+        }
+        .test
+        {
+            width: 50px;
+            height: 30px;
+        }
+        .burger-icon .hamburgerchecked
+        {
+            width: 50px;
+            height: 30px;
+            position:absolute;
+            top : 1%;
+            left: 40%;
+        }
+        .hamburgerCheckBox:checked~.burger-icon .hamburgerchecked::before{
+            top: 50%;
+            transform:rotate(45deg);
+        }
+        .hamburgerCheckBox:checked~.burger-icon .hamburgerchecked::after {
+            top: 50%;
+            transform:rotate(135deg);
+        }
+        .hamburgerCheckBox:checked~.burger-icon .icon
+        {
+            background : rgba(255, 255, 255, 0);
+        }
+        .icon
+        {
+            position:absolute;
+            top : 13px;
+            left : 0px;
+            background-color: black;
+            width: 100%;
+            height: 4px;
+        }
+        .hamburgerchecked::before
+        {
+            content :"";
+            position:absolute;
+            top : 0px;
+            left : 0px;
+            background-color: black;
+            width: 100%;
+            height: 4px;
+        }
+        .hamburgerchecked::after
+        {
+            content :"";
+            position:absolute;
+            bottom : 0px;
+            left : 0px;
+            background-color: black;
+            width: 100%;
+            height: 4px;
+        }
+        .hamburgerCheckBox
+        {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="hamburger">
+        <div class="icon">
+        </div>
+    </div>
+    <input type="checkbox" id="hamburgerCheckBox" class="hamburgerCheckBox">
+    <label class="burger-icon" for="hamburgerCheckBox">
+    <div class="hamburgerchecked">
+        <div class="icon">
+        </div>
+    </div>
+    </label>
+    </div>
+    <div class="test">
+        <div class="testMiddle">
+        </div>
+    </div>
+    <p>
+        가장 중요한 가상 요소의 생성 위치는<br> ::before 가상요소 -> 요소의 콘텐츠 -> ::after 가상요소 순서.
+        <br> 컨테이너에 컨텐츠를 하나만들고 컨테이너에 가상 선택자를 적용하여 만들어야 한다.
+    </p>
+    
+</body>
+</html>
