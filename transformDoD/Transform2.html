@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform dod 1번</title>
+    <style>
+        :root
+        {
+            --bacground-center : var(--bacground-album);
+            --bacground-album : aquamarine;
+        }
+        .mainContent
+        {
+            display: flex;
+            height: 98vh;
+            width: 99vw;
+            justify-content: center;
+            align-items: center;
+            background-color: yellowgreen;
+        }
+        .line
+        {
+            display: flex;
+            width: 100%;
+            height: 20rem;
+            justify-content: center;
+            align-items: center;
+        }
+        .album
+        {
+            transform : skew(20deg, -40deg);
+            height:100%;
+            width:50%;
+            margin-left: -5rem;
+            background-color: aquamarine;
+            border : 1px solid black;
+            -webkit-box-reflect: below -1rem linear-gradient(transparent, yellowgreen);
+        }
+        .album.first
+        {
+            margin-left : 0px;
+        }
+        .album.last
+        {
+            margin-right :0px;
+        }
+        input[type="radio"]
+        {
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .albumList:checked + label
+        {
+            
+            transform : skew(-20deg, 40deg);
+            transform : scale(1.5, 1.5);
+            transform : perspective(30rem);
+            box-shadow: 5px 5px gray;
+            background-color: red;
+        }
+        /* .album:nth-child(8)
+        {
+            transform : skew(-20deg, 40deg);
+            transform : scale(1.5, 1.5);
+            box-shadow: 5px 5px gray;
+            z-index: 999;
+        } */
+        .album:not(:nth-child(8))
+        {
+            background-color: rgb(56, 103, 242);
+            transform : skew(-20deg, 40deg);
+            transform : perspective(30rem) rotateY(45deg);
+            margin-left: -5rem;
+            z-index:998;
+        }
+        .album:nth-child(6)
+        {
+            margin-right: 10rem;
+        }
+        .album:nth-child(8)
+        {
+            margin-left: 10rem;
+        }
+        .album:nth-child(n + 8)
+        {
+            background-color: var(--bacground-center);
+            transform : skew(-20deg, 40deg);
+            transform : perspective(30rem) rotateY(-45deg);
+            margin-right : -1rem;
+            z-index: 9999;
+        }
+        .album:nth-child(10)
+        {
+            z-index : 999;
+        }
+        .album:nth-child(12)
+        {
+            z-index : 998;
+        }
+        .album:nth-child(14)
+        {
+            z-index : 997;
+        }
+        /* .album:not(:nth-child(n+8)):hover
+        {
+            
+            transform : skew(-20deg, 40deg);
+            transform : scale(1.6, 1.6);
+            transform : perspective(0rem) rotateY(0deg);
+            margin-right : 100px;
+            z-index:9999;
+        } 
+        .album:nth-child(n+8):hover
+        {
+            
+            transform : skew(-20deg, 40deg);
+            transform : scale(1.6, 1.6);
+            transform : perspective(0rem) rotateY(0deg);
+            z-index:9999;
+        } */
+        #albumList1:checked + label
+        {
+            position : absolute;
+            transform: translateX(-5rem);
+            height : 60vh;
+            width : 30vw;
+            /* transform : translateX(250%) scale(1.7,1.6); */
+            z-index: 10999;
+        }
+        #albumList2:checked + label
+        {
+            position : absolute;
+            transform: translate(0,0);
+            height : 60vh;
+            width : 30vw;
+            /* transform : translateX(250%) scale(1.7,1.6); */
+            z-index: 10999;
+        }
+        #albumList3:checked + label
+        {
+            position : absolute;
+            transform: translate(0,0);
+            height : 60vh;
+            width : 30vw;
+            /* transform : translateX(250%) scale(1.7,1.6); */
+            z-index: 10999;
+        }
+        #albumList4:checked + label
+        {
+            position : absolute;
+            transform: translate(0,0);
+            height : 60vh;
+            width : 30vw;
+            /* transform : translateX(250%) scale(1.7,1.6); */
+            z-index: 10999;
+        }
+        #albumList5:checked + label
+        {
+            position : absolute;
+            transform: translate(0,0);
+            height : 60vh;
+            width : 30vw;
+            /* transform : translateX(250%) scale(1.7,1.6); */
+            z-index: 10999;
+        }
+        #albumList6:checked + label
+        {
+            position : absolute;
+            transform: translateX(5rem);
+            height : 60vh;
+            width : 30vw;
+            /* transform : translateX(250%) scale(1.7,1.6); */
+            z-index: 10999;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainContent">
+        <div class="line">
+            <input type="radio" class="albumList" id="albumList1" name="albumList">
+                <label class="album" for="albumList1"></label>
+            <input type="radio" class="albumList" id="albumList2" name="albumList">
+                <label class="album" for="albumList2"></label>
+            <input type="radio" class="albumList" id="albumList3" name="albumList">
+                <label class="album" for="albumList3"></label>
+            <input type="radio" class="albumList" id="albumList4" name="albumList">
+                <label class="album" for="albumList4"></label>
+            <input type="radio" class="albumList" id="albumList5" name="albumList">
+                <label class="album" for="albumList5"></label>
+            <input type="radio" class="albumList" id="albumList6" name="albumList">
+                <label class="album" for="albumList6"></label>
+        </div>
+    </div>
+</body>
+</html>
