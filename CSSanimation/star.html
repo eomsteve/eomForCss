@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div drawing star!</title>
+    <style>
+        .starImg
+        {
+            height:700px;
+            width :700px;
+            background-image: url(star.jpg);
+            background-repeat: no-repeat;
+        }
+        .star
+        {
+            position : absolute;
+            height: 30px;
+            width: 30px;
+            background-color: blue;
+            animation-name: star;
+            animation-duration: 10s;
+            top : 20%;
+            animation-iteration-count : infinite;
+        }
+
+        @keyframes star
+        {
+            0%
+            {
+                top : 20% ;left : 7%;
+            }
+            20%
+            {
+                top : 20%; left : 40%;
+            }
+            40%
+            {
+                top : 50%; left : 13%;               
+            }
+            60%
+            {
+                top : 0%; left : 23%; 
+            }
+            80%
+            {
+                top : 50%; left: 33%;
+            }
+            100%
+            {
+                top :  20%; left : 7%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="starImg">
+        <div class="star">
+
+        </div>
+    </div>
+</body>
+</html>
