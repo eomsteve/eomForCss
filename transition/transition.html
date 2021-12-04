@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hamburger</title>
+    <style>
+        .container{
+            width : 30px;
+            height : 30px;
+            position : absolute;
+        }
+        .container::after,.container::before,.middle
+        {
+            transition : transform 0.4s;
+        }
+        .container::before
+        {
+            content :"";
+            position:absolute;
+            top : 0px;
+            left : 0px;
+            background-color: black;
+            width: 100%;
+            height: 4px;
+        }
+        .container::after
+        {
+            content :"";
+            position:absolute;
+            bottom : 0px;
+            left : 0px;
+            background-color: black;
+            width: 100%;
+            height: 4px;
+        }
+        .middle
+        {
+            position : absolute;
+            top : 13px;
+            width : 100%;
+            background-color: black;
+            height : 4px;
+        }
+        .containerChecked
+        {
+            display : none;
+        }
+        .containerChecked:checked~label .container::before
+        {
+            top: 50%;
+            transform:rotate(45deg);
+        }
+        .containerChecked:checked~label .container::after
+        {
+            top: 50%;
+            transform:rotate(135deg);
+        }
+        .containerChecked:checked~label .middle
+        {
+            background : rgba(255, 255, 255, 0);
+        }
+    </style>
+</head>
+<body>
+    <input class="containerChecked" type="checkbox" name="hamburger" id="hamburger">
+        <label  for="hamburger">
+            <div class="container">
+                <div class="middle"></div>
+            </div>
+        </label>
+</body>
+</html>
